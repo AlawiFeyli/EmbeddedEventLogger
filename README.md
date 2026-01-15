@@ -1,29 +1,31 @@
-Inlämningsuppgift: Embedded Event Logger
-Detta projekt simulerar ett inbyggt system som tar emot sensorhändelser, köar dem i en ringbuffer och sparar dem i en dynamisk logg för analys (sortering och sökning).
+GitHub Repo: https://github.com/AlawiFeyli/EmbeddedEventLogger
 
-Hur man bygger och kör
-Kompilering: Använd g++ (eller valfri C++-kompilator). Alla moduler måste länkas samman:
+InlÃ¤mningsuppgift: Embedded Event Logger
+Detta projekt simulerar ett inbyggt system som tar emot sensorhÃ¤ndelser, kÃ¶ar dem i en ringbuffer och sparar dem i en dynamisk logg fÃ¶r analys (sortering och sÃ¶kning).
+
+Hur man bygger och kÃ¶r
+Kompilering: AnvÃ¤nd g++ (eller valfri C++-kompilator). Alla moduler mÃ¥ste lÃ¤nkas samman:
 
 Bash
 
 g++ main.cpp EventQueue.cpp EventLog.cpp Sort.cpp -o logger
-Körning:
+KÃ¶rning:
 
 Bash
 
 ./logger
 
-Testinstruktioner (Exempelkörning)
-För att verifiera att systemet fungerar, kör följande kommandon i menyn:
+Testinstruktioner (ExempelkÃ¶rning)
+FÃ¶r att verifiera att systemet fungerar, kÃ¶r fÃ¶ljande kommandon i menyn:
 
-tick 5 - Skapar 5 händelser (notera att larm kan triggas om värdet > 45).
+tick 5 - Skapar 5 hÃ¤ndelser (notera att larm kan triggas om vÃ¤rdet > 45).
 
 print - Se den osorterade loggen.
 
-sort - Sorterar loggen baserat på tidsstämpel.
+sort - Sorterar loggen baserat pÃ¥ tidsstÃ¤mpel.
 
-print - Kontrollera att tidsstämplarna nu är i stigande ordning.
+print - Kontrollera att tidsstÃ¤mplarna nu Ã¤r i stigande ordning.
 
-find 1 - Sök efter alla händelser från sensor med ID 1.
+find 1 - SÃ¶k efter alla hÃ¤ndelser frÃ¥n sensor med ID 1.
 
 alarms - Se vilka sensorer som har triggat larmmodulen.
